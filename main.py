@@ -69,12 +69,9 @@ def send_welcome(message):
 
 @bot.message_handler(func = lambda message: True)
 def on_message(message):
-    f = open("logs/" + str(message.chat.id) + "_log.txt", "a", encoding = "UTF-8")
     msg = message.text
     ints = predict_class(msg)
     res = get_response(ints, intents)
-    f.write("u: " + message.text + "\n" + res + "\n")
-    f.close()
     bot.send_message(message.chat.id, res)
 
 bot.infinity_polling()
