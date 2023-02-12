@@ -13,6 +13,7 @@ API_TOKEN = "5898955683:AAG-VEooW2vIoKV3Diz36Ci1VomR-U-axLQ"
 
 bot = telebot.TeleBot(token = API_TOKEN)
 
+nltk.download("punkt")
 
 lemmatizer = WordNetLemmatizer()
 
