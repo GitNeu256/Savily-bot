@@ -1,0 +1,4 @@
+tensorflow
+pytelegrambotapi
+nltk
+numpy
